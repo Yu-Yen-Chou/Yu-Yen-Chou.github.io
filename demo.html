@@ -12,17 +12,16 @@
         function sendJSONDataToApp() {
             // JSON 数据
             var jsonData = {
-                "key1": "value1",
-                "key2": "value2"
+                "otp": "12334354677657"
             };
             
-            // 将 JSON 对象转换为字符串
+           // 將 JSON 對象轉換為字符串
             var jsonString = JSON.stringify(jsonData);
             
-            // 对字符串进行 URL 编码
+            // 對字符串進行 URL 編碼
             var encodedData = encodeURIComponent(jsonString);
             
-            // 使用自定义的 URL Scheme 发送消息给应用程序
+              // 使用自定義的 URL Scheme 向應用程式發送消息
             window.location.href = "myapp://callback?data=" + encodedData;
         }
     </script>
